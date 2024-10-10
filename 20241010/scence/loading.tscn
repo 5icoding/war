@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjgiyg0fyt14n"]
+
+[ext_resource type="Script" path="res://script/loading.gd" id="1_02f7g"]
+
+[node name="Loading" type="Node2D"]
+script = ExtResource("1_02f7g")
+
+[node name="startButton" type="Button" parent="."]
+offset_left = 534.0
+offset_top = 410.0
+offset_right = 700.0
+offset_bottom = 467.0
+text = "开始游戏"
+
+[node name="introduction" type="RichTextLabel" parent="."]
+offset_left = 229.0
+offset_top = 51.0
+offset_right = 1034.0
+offset_bottom = 308.0
+text = "<h1>这是果爸的战争</h1>
+面对中国出现严重的社会问题附带的教育问题，果爸必须面对。"
+
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]

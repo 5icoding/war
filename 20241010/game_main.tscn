@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5rskgafraypu"]
+
+[ext_resource type="Script" path="res://game_main.gd" id="1_b2ucx"]
+
+[node name="GameMain" type="Node"]
+script = ExtResource("1_b2ucx")
+
+[node name="scence" type="Node" parent="."]
+
+[node name="popWindow" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 277.0
+offset_right = 600.0
+offset_bottom = 359.0
+text = "game Main"
