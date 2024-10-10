@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://f5kviyw1ek7o"]
+
+[ext_resource type="Script" path="res://SMXMap/map.gd" id="1_ewnvv"]
+[ext_resource type="Texture2D" uid="uid://dc80wi1k4c8ba" path="res://images/background.png" id="2_45yxd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ewnvv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -6.0
+offset_top = 2.0
+offset_right = 1145.0
+offset_bottom = 643.0
+texture = ExtResource("2_45yxd")
+
+[node name="goback" type="Button" parent="."]
+offset_left = 980.0
+offset_top = 58.0
+offset_right = 1109.0
+offset_bottom = 97.0
+text = "返回"
+
+[node name="event" type="Button" parent="."]
+offset_left = 983.0
+offset_top = 189.0
+offset_right = 1114.0
+offset_bottom = 233.0
+text = "处理突发事件"
+
+[node name="plan" type="Button" parent="."]
+offset_left = 975.0
+offset_top = 119.0
+offset_right = 1110.0
+offset_bottom = 163.0
+text = "计划安排"
+
+[node name="life_value" type="Label" parent="."]
+offset_left = 110.0
+offset_top = 101.0
+offset_right = 256.0
+offset_bottom = 124.0
+tooltip_text = "生命力数值"
+mouse_filter = 1
+text = "300"
+
+[node name="life_label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 101.0
+offset_right = 86.0
+offset_bottom = 124.0
+text = "生命力："
+
+[connection signal="pressed" from="goback" to="." method="_on_goback_pressed"]
+[connection signal="pressed" from="event" to="." method="_on_event_pressed"]
+[connection signal="pressed" from="plan" to="." method="_on_plan_pressed"]

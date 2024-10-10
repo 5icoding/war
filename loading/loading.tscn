@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://dokjy4gjjfsrs"]
+
+[ext_resource type="Script" path="res://loading/loading.gd" id="1_w0mpj"]
+[ext_resource type="Texture2D" uid="uid://bgs6dvvnty3hf" path="res://images/bg_loading.png" id="2_k1guw"]
+
+[node name="loading" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+script = ExtResource("1_w0mpj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 1155.0
+offset_bottom = 653.0
+texture = ExtResource("2_k1guw")
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 93.0
+offset_right = 1078.0
+offset_bottom = 130.0
+text = "开始游戏"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 286.0
+offset_right = 1086.0
+offset_bottom = 326.0
+text = "退出游戏"
+
+[node name="loading" type="Button" parent="."]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 160.0
+offset_right = 1080.0
+offset_bottom = 199.0
+text = "装载记录"
+
+[node name="setting" type="Button" parent="."]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 224.0
+offset_right = 1079.0
+offset_bottom = 259.0
+text = "设  置"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="setting" to="." method="_on_setting_pressed"]
